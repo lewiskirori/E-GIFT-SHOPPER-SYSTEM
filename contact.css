@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)),url("slider-images-1 (1).jpg");
+    background-size: cover;
+    font-family: palatino linotype;
+    color: rgba(253, 225, 228, 0.933);
+}
+
+
+
+
+/*navigation bar*/
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 70;
+        overflow: hidden;
+        background-color: transparent;
+        border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+        box-shadow: 2px 2px 30px rgba(167, 158, 245, 0.2);
+    }
+  
+    li {
+        float: left;
+    }
+  
+    li a {
+        display: block;
+        color: rgba(253, 225, 228, 0.933);
+        text-align: center;
+        padding: 14px 110px;
+        text-decoration: none;
+        letter-spacing: 5px;
+    }
+  
+    /* Change the link color on hover */
+    li a:hover {
+        background-color: #90EE90;
+        color: #00acee;
+        background:  transparent;
+    
+    }
+
+    .contact-title
+    {
+        margin-top: 100px;
+        color: #fff;
+        text-transform: uppercase;
+        transition: all 4s ease-in-out;
+    }
+
+    .contact-title h1
+    {
+        font-size: 32px;
+        line-height: 10px;
+    }
+
+    .contact-title h2
+    {
+        font-size: 16px;
+    }
+
+    form
+    {
+        margin-top: 50px;
+        transition: all 4s ease-in-out;
+    }
+
+    .form-control{
+        width: 600px;
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid gray;
+        color: #fff;
+        font-size: 17px;
+        font-weight: bold;
+        font-family: palatino linotype;
+        margin-bottom: 16px;
+    }
+
+    input{
+        height: 45px;
+    }
+
+    .form-control-submit{
+        background: #ff5722;
+        border-color: transparent;
+        color: #fff;
+        font-size: 17px;
+        font-weight: bold;
+        font-family:  tahoma ;
+        letter-spacing: 2px;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    .form-control-submit:hover{
+        background-color: #f44336;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+@media(max-width: 991px)
+{
+    form{
+        padding: 50px;
+    }
+    .form-control, input{
+        flex-direction: column;
+    }
+    .form-control-submit{
+        margin-bottom: 40px;
+    }
+    .form-control-submit,
+    .form-control, form
+    {
+        width: 100%;
+
+    }
+}

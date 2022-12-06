@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("signup1-161697156.jpg");
+    background-size: cover;
+    font-family: sans-serif;
+    background-color: #356a72;
+}
+/*navigation bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 70;
+    overflow: hidden;
+    background-color: transparent;
+}
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgba(253, 225, 228, 0.933);
+    text-align: center;
+    padding: 14px 90px;
+    text-decoration: none;
+    letter-spacing: 5px;
+  }
+  
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: #90EE90;
+    background:  transparent;
+    border: 2px solid #00acee;
+  }
+
+.loginbox{
+    width: 370px;
+    height: 470px;
+    background: #000;
+    color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+
+}
+
+.avatar{
+
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    position: relative;
+    top: -25px;
+    justify-content: center;
+    padding-left: 20px -90px;
+
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    font-family: ubuntu;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-family:  palatino linotype;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px ;
+    font-family: palatino linotype;
+}
+button
+{
+    border: 2px solid rgb(179, 55, 232);
+    outline: none;
+    height: 40px;
+    background: transparent;
+    color:  #90ee90;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: palatino linotype;
+    padding: 3px 50px;
+    border-radius: 30px;
+
+    
+}
+
+button:hover
+{
+    cursor: pointer;
+    background: #90ee90 ;
+    color: #141414;
+    border: 2px solid transparent;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    font-family: tahoma;
+    line-height: 20px;
+    color: darkgray;
+}
+
+.loginbox a:hover{
+    color: #90ee90;
+}
+
