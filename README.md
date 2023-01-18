@@ -1,6 +1,6 @@
 # E-GIFT-SHOPPER-SYSTEM
 
-This system has been developed to realize necessities of customers regarding online purchases. It manages all information about shopping, gifts, customers and payment modules by Lewis, dse-01-0174/2021.
+This system has been developed to realize necessities of customers regarding online purchases. It manages all information about shopping, gifts, customers and payment modules.
 
 ## Table of Contents
 
