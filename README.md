@@ -2,27 +2,6 @@
 
 This system has been developed to realize necessities of customers regarding online purchases. It manages all information about shopping, gifts, customers and payment modules.
 
-## Table of Contents
-
-- [E-GIFT-SHOPPER-SYSTEM](#e-gift-shopper-system)
-  - [Table of Contents](#table-of-contents)
-  - [Problem Statement](#problem-statement)
-  - [Objectives](#objectives)
-  - [Requirements Specification](#requirements-specification)
-    - [Customers Management](#customers-management)
-    - [Shoppers Management](#shoppers-management)
-    - [Payments Management](#payments-management)
-  - [Design Description](#design-description)
-    - [Sign-up Page](#sign-up-page)
-    - [Login Page](#login-page)
-  - [High Level Design](#high-level-design)
-    - [Home page](#home-page)
-    - [Customer Sign-up Page](#customer-sign-up-page)
-    - [Customer SignIn Page](#customer-signin-page)
-    - [Shopper Home Page](#shopper-home-page)
-    - [Administrator Home Page](#administrator-home-page)
-    - [Flowers Management](#flowers-management)
-    - [FeedBack Page](#feedback-page)
 
 ## Problem Statement
 
@@ -47,16 +26,16 @@ As retailers face increasing operational complexity, handling processes using ma
     - Sign-up
     - Login
     - Profile
-    - Password Reset
+    - Password
 
 ### Shoppers Management
 
     - View gifts
     - Make order
-    - Delete order
+    - Add order
     - Update order
 
-### Payments Management
+#### Payments Management ~ stay tuned
 
     - Authentication Layer
     - PCI compliance
@@ -67,42 +46,7 @@ As retailers face increasing operational complexity, handling processes using ma
     - Funds Report
     - View payments
 
-## Design Description
+#### Remarks
 
-### Sign-up Page
+    ---Good job---
 
-![Sign-up](images/../E-gift-shopper-Sign-Up.png)
-
-### Login Page
-
-![Login](images/../E-gift-shopper-login.png)
-
-## High Level Design
-
-### Home page
-
-![Home-page](images/../home-page.png)
-
-### Customer Sign-up Page
-
-![Customer-sign-up](images/../customer-sign-up.png)
-
-### Customer SignIn Page
-
-![Customer-signIn](images/../customers-signIn.png)
-
-### Shopper Home Page
-
-![Shopper-Home-page](images/../shoppers-home-page.png)
-
-### Administrator Home Page
-
-![Admins-Home-page](images/../administrators-home-page.png)
-
-### Flowers Management
-
-![Flowers-management](images/../flowers-management.png)
-
-### FeedBack Page
-
-![FeedBack-page](images/../FeedBack-page.png)
