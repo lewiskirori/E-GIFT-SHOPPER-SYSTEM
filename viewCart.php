@@ -1,3 +1,4 @@
+<!--
 <html>
 <head>
 <?php
@@ -60,6 +61,7 @@ include "header.php";
 </tr>
 </table>
 </form>
+-->
 <?php
 
 include "dbconfigure.php";
