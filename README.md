@@ -35,7 +35,7 @@ As retailers face increasing operational complexity, handling processes using ma
     - Add order
     - Update order
 
-#### Payments Management ~ stay tuned
+#### Payments Management ~~~ C.S 
 
     - Authentication Layer
     - PCI compliance
