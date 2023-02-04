@@ -69,10 +69,21 @@ span{
     margin-bottom: 45px;
 }
 
+/* Change the link color on hover */
+  li a:hover {
+    background-color: #90EE90;
+    color: #90EE90;
+    margin: -30 auto;
+    background:  transparent;
+    border: 7px solid colorless;
+    transform:scale(1.05);
+    box-shadow:2px 2px 5px rgba(0,0,0,0.20), inset 0 0 0 99999px rgba(0,0,0,0.2);
+
+  }
 button{
     background: transparent;
-    color: rgba(219, 152, 159, 0.933);
     text-decoration: none;
+    color: rgba(219, 152, 159, 0.933);
     border: 2px solid transparent;
     font-weight: bold;
     font-family: tahoma;
@@ -82,8 +93,10 @@ button{
 }
 
 button:hover{
-    color: rgba(253, 225, 228, 0.933);
+    color: #695e5e;
     cursor: pointer;
+    transform:scale(1.05);
+    box-shadow:2px 2px 5px rgba(0,0,0,0.20), inset 0 0 0 99999px rgba(0,0,0,0.2);
 }
 
 button:hover text {
@@ -128,4 +141,18 @@ button:hover text {
     font-size: 1rem;
     color: #695e5e;
     letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* styles for small screens */
+  .container{
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  /* styles for large screens */
+  .container{
+    width: 80%;
+  }
 }
