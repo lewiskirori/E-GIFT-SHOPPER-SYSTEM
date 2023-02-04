@@ -5,13 +5,13 @@
 
     $email_from ='$visitor_email';
 
-    $email_subject = "New Form Submission";
+    $email_subject = "Talk to Us!<<egs>>";
 
     $email_body = "User Name: $name.\n".
                     "User Email: $visitor_email.\n".
                         "User Message: $message.\n";
 
-    $to             = "amicableycot@gmail.com";
+    $to             = "```";
 
     $headers        = "From: $email_from \r\n";
 
@@ -19,6 +19,6 @@
 
     mail ($to,$email_subject,$email_body,$headers);
 
-    header("Location: contact.html");
+    header("Location: contact.htm");
 
 ?>
