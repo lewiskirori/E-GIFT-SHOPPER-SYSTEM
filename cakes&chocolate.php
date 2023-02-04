@@ -1,15 +1,42 @@
+<?php session_start();
+if(empty($_SESSION['id'])):
+    header('Location:index.php');
+endif;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg "> 
+    <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg ">
+    
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg "> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" type="text/css" href="index.css"/>
     <title>Cakes & Chocolate</title>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+  </script>
+
 
 </head>
 <body>
@@ -17,25 +44,27 @@
    <section class="main">
 
     <!-------logo----------->
-    <div class="logo"><a href="cakes&chocolate.php"><font>Cakes & </font>Chocolate🍫</a></div>
+    <div class="logo"><a href="cakes&chocolate.php"><font>Cakes & </font>Chocolate</a></div>
   
+    <!-------logout------------------------->
+    <a href="logout process.php"><div style="float:right"><button><i class="fa fa-power-off" aria-hidden="true"></i>LogOut</button></div></a>
 
   <!------navigation-bar------------->
   <ul>
-    <li><a href="home.php">🏪Home</a></li>
-    <li><a href="about.php">👥About</a></li>
-    <li><a href="contact.php">☎️Contact Us</a></li>
+    <li><a href="home.php"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="about.php"><i class="fas fa-info-circle"></i> About</a></li>
+    <li><a href="contact.shtm"><i class="fas fa-phone"></i> Contact Us</a></li>
     <!----Cart------------------------------------------------------------------------------------->
 <li class="cart">
     <a href="cart.php">
-        <i class='fas fa-gift' style='font-size:18px'>🛒Proceed to Cart ~ <span>0</span></i>
+        <i class="fas fa-cart-arrow-down"></i> Proceed to Cart ~ <span>0</span>
     </a>
 </li>
   </ul>
     
 
   <!----------------------------------functional-search-box---------------------------------------->
-  <input type="search" value="" class="search-bar" id="search" placeholder="Search Bar" onchange="openPage()">
+  <input type="search" value="" class="search-bar" id="search" placeholder="Search Gift, ..." onchange="openPage()">
         <div id="navigation"></div>
         <script>
             function openPage(){
@@ -178,26 +207,49 @@
             $userEmail = ""; 
                 if(isset($_POST['subscribe'])){//if subscribe btn is clicked
                     $userEmail = $_POST['email']; //getting user email
-                    if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
-                        $subject = "Thanks for subscribing us - E-Gift Shopper";
-                        $message    = "Thanks for subscrbing to our gift shop. You'll always receive latest gift updates from us!";
+                   if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
+                        $subject = "Thanks for subscribing us - Cakes & Chocolate 🍫";
+                        $message    = "Thanks for subscrbing to our gift shop. You will always receive latest gift updates on Cakes and Chocolate from us! <br> Regards, Administrator. </br>";
                         $sender  = "From: coldcode703@gmail.com"; //email from config xamppp
                             if(mail($userEmail, $subject, $message, $sender)){//php function to send email
                                 ?>
-                                <!--show a success message if email is  sent successfully-->
-                                <div class="alert success">Cheers!Your Subscription was successful! </div>
+                            <!--show a success message if email is  sent successfully-->
+                                <script>
+                                    swal({
+                                  title: "Cheers!",
+                                  text: "Your Subscription was successful!",
+                                  icon: "success",
+                                  button: "Aww yiss!",
+                                  closeOnClickOutside: false,
+                                });
+                                </script>
                                 <?php
                                 $userEmail = "";//once mail is sent
                             }else{
                                     ?>
                                     <!--show an error message if somehow mail cannot be sent-->
-                                    <div class="alert error">Failed somehow while sending your email! Plase Try again later.</div>
+                                    <script>
+                                    swal("Please Try again later.", "Failed somehow while sending your email!", "success", {
+                                        className: "boxstyle",
+                                        buttons: {
+                                            cancel: true,
+                                            closeOnClickOutside: false,
+                                  });
+                                    </script>
                                     <?php
                                     }
                     }else{
                         ?>
                         <!--show an error message if user email is  not correct-->
-                        <div class="alert error"><?php echo $userEmail ?> is not a correct email! Please try again.</div>
+                        <script>
+                            swal("Please Try again.",
+                                 "<?php echo $userEmail ?> is not a correct email!",
+                                 "warning", {
+                                dangerMode: true,
+                                buttons: true,
+                                closeOnClickOutside: false,
+                            });
+                        </script>
                         <?php
                     }
                 }
@@ -220,7 +272,7 @@
         <!----text------->
         <div class="brand-text">
             <h3>Our Brand</h3>
-            <h4>E-Gift shopper 2022 </h4>
+            <h4><?php echo date ('Y'); ?> | E-Gift Shopper </h4>
             <p>We Manage online gift purchases. This allows shoppers to search for and book gifts in their comfort zone areas. Shipping cost is also payable. We help you order the gift you want at a convenient time.
             </p>
         </div>
@@ -232,7 +284,7 @@
         </section>
 
     <!-----copyright------------------------->
-    <a href="#copyright" class="copyright">©️Copyright 2022. E-Gift Shopper</a>
+    <a href="#copyright" class="copyright">&copy 2021-<?php echo date ('Y'); ?> E-Gift Shopper | All Rights Reserved.</a>
     
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="cakes.js"></script>
