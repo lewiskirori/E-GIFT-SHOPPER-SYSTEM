@@ -6,19 +6,40 @@ require_once('config.php');
 <html>
 <head>
     <title>
-        Sign up Page
+        Sign up - EGS
     </title>
     <link rel="stylesheet" type="text/css" href="reg.css">
+     <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg ">
+     
+     <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg "> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+  </script>
 </head>
 
 <center>
 <body>
     <!------navigation-bar------------->
   <ul>
-    <li><a href="index.php">🏪Home</a></li>
-    <li><a href="about.php">👥About</a></li>
-    <li><a href="contact.php">☎️Contact Us</a></li>
-    <li><a href="login.php">LOGIN</a></li>
+    <li><a href="https://e-gift-shopper.000webhostapp.com/"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="about.php"><i class="fas fa-info-circle"></i> About</a></li>
+    <li><a href="contact.shtm"><i class="fas fa-phone"></i> Contact Us</a></li>
+    <li><a href="login.php"><i class="fas fa-power-off"></i> LOGIN</a></li>
   </ul>
 
 <div>
@@ -35,25 +56,32 @@ require_once('config.php');
         $names=array($firstname, $lastname, $email, $phonenumber, $password);
         $result = $stminsert->execute($names);
 
-
-        if($result){
-            echo 'Sign up was successfully saved! Please proceed to LOGIN!';
+              if($result){
+            echo "<script type='text/javascript'> 
+                alert('Yaay:) Sign up was successful! Please proceed to LOGIN!'); 
+            </script>"; 
+            'Yaay! Sign up was successful! Please proceed to LOGIN!';
         }else{
-            echo 'There were errors while saving the data.';
+            echo 'Error occurred while saving data.';
         }
     }
     ?>
 </div>
 
 
-<div class="loginbox">
+<div class="loginbox" text-center>
 <img src="index-images\signin-avatar.png" class="avatar"><br>
 
 
     <form action="registration.php"  method="POST">
-        <div class="container">
-            <h1>Sign Up</h1>
-            <p>Fill up the page with correct values.</p>
+        <div class="container" text-center>
+            <style>
+      .loginbox{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        border-radius: 4px;
+            }
+            </style>
+            <h1>E-Gift Shopper</h1>
             <hr class="mb-3">
             <label for="firstname"><b>First Name</b></label>
             <input type="text" id="firstname" name="firstname" placeholder="firstname" required>
@@ -74,7 +102,7 @@ require_once('config.php');
         </div>
 
     
-    <a href="login.php">Already a member ?</a>
+    <a href="login.php">I already have an account ?</a>
     </form>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -124,7 +152,8 @@ require_once('config.php');
             
         });
        
-        alert('Hello👋! Welcome to E-GIFT SHOPPER! Please proceed for Logging in!!');
+       
+        alert('Welcome to E-GIFT SHOPPER! Please proceed for Logging in!!');
         
         
     });
