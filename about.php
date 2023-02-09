@@ -4,7 +4,7 @@
             About Us
         </title>
         <link rel="stylesheet" type="text/css" href="about.css">
-        <link rel="shortcut icon" href=" slider-images-1 (1).jpg "> 
+        <link rel="shortcut icon" href=" logo-images/EGSS-LoGo.png"> 
     </head>
     <!---Navigation--->
     <ul>
@@ -22,7 +22,7 @@
                 <img src="logo-images\brand-img.jpg">
                 <h1>About Us</h1>
                 <h5>System <span>Information</span></h5>
-                <p>This is an <strong>E-GIFT SHOPPER SYSTEM</strong> . It has been developed by <strong>coldcode </strong></strong> The system has been realized with more interactive and responsive design features making the website accessible to all users, regardless of their device & access areas.</p>
+                <p>This is an <strong>E-GIFT SHOPPER SYSTEM</strong> . It has been developed by <strong>coldcode </strong></strong> The system has been realized with more interactive and responsive design features making the website accessible to all users. We Manage online gift purchases. This allows shoppers to search for and order gifts effectively. Shipping cost is also payable. We help you order the gift you want at the best convenient time.</p>
                 <a href="contact.shtm"><button type="button"> 💬Let's Talk</button></a>
             </div>
         </section>
@@ -33,7 +33,7 @@
         <div class="brand-text">
             <h3>Our Brand</h3>
             <h4>E-Gift shopper <?php echo date ('Y'); ?> </h4>
-            <p>We Manage online gift purchases. This allows shoppers to search for and book gifts in their comfort-zone areas. Shipping cost is also payable. We help you order the gift you want at a convenient time.
+            <p>This system has been developed to realize necessities of customers regarding online purchases. It manages all information about shopping, gifts, customers and payment modules.<br> Wonderful Gift Shopping Today!
             </p>
         </div>
         <!---img------>
