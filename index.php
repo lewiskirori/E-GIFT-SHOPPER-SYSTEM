@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg "> 
+    <link rel="shortcut icon" href=" logo-images/EGSS-LoGo.png "> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
      <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
@@ -203,7 +203,7 @@
     <h1>👋</h1>
     <!-------footer-menu------>
     <ul class="footer-menu">
-      <p><h1>Welcome to E-Gift Shopper! </h1><h2><marquee>Sign-Up to make a purchase & enjoy amazing gift shopping today!</marquee></h2></p> 
+      <p><h2><marquee>Welcome to E-Gift Shopper! Sign-Up & make a purchase to enjoy amazing e-gift shopping today!</marquee></h2></p> 
 
     </ul>
 </footer>
@@ -777,8 +777,8 @@
                 if(isset($_POST['subscribe'])){//if subscribe btn is clicked
                     $userEmail = $_POST['email']; //getting user email
                     if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
-                        $subject = "Thanks for subscribing us - E-Gift Shopper 🎁";
-                        $message    = "Thanks for subscrbing to our gift shop. You will always receive latest gift updates from us! <br> Regards, Administrator. </br>";
+                        $subject = "Thanks for subscribing us | E-Gift Shopper 🎁";
+                        $message    = "Thank you for subscrbing to our gift shop. You will receive latest gift updates from EGS! <br> Regards, ACC^.";
                         $sender  = "From: coldcode703@gmail.com"; //email from config xamppp
                             if(mail($userEmail, $subject, $message, $sender)){//php function to send email
                                 ?>
