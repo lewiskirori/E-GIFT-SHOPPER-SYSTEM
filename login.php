@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>
-        Login Page
+        Log in - E-Gift Shopper
     </title>
     <link rel="stylesheet" type="text/css" href="login.css">
-    <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg ">
+    <link rel="shortcut icon" href=" logo-images/EGSS-LoGo.png ">
     
     <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,16 +45,17 @@
 
 
     <form action="login process.php" method="POST">
-    <input required="required" type="text" id="user" name="username" placeholder="enter firstname"/><br><br>
+    <input required="required" type="text" id="user" name="username" placeholder="Enter firstname"/>
+    <span class="fas fa-user"></span><br><br>
 
-    <input required="required" type="password" id="pass" name="password" placeholder="enter password"/><br><br>
+    <input required="required" type="password" id="pass" name="password" placeholder="Enter password"/>
+    <span class="fas fa-lock"></span><br><br>
     
-    <button type="submit" id="btn" name="login" default><i class="fas fa-lock"></i> Sign in </button><br><br>
-    <a href="registration.php">Don't have an account ?</a>
+    <button type="submit" id="btn" name="login" default><i class="fas fa-sign-in"></i> Sign in </button><br><br>
+    <a href="registration.php">Not a member yet ?</a>
 
 </form>
 </center>
 </div>
 </body>
 </html>
-
