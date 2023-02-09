@@ -11,7 +11,7 @@ endif;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg ">
+    <link rel="shortcut icon" href=" logo-images/EGSS-LoGo.png">
     
      <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -206,8 +206,8 @@ endif;
                 if(isset($_POST['subscribe'])){//if subscribe btn is clicked
                     $userEmail = $_POST['email']; //getting user email
                     if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
-                        $subject = "Thanks for subscribing us - Home & Living 🛋";
-                        $message    = "Thanks for subscrbing to our gift shop. You will always receive latest gift updates on Home and Living from us! <br> Regards, Administrator. </br>";
+                        $subject = "Home & Living 🛋";
+                        $message    = "Thanks YOU for subscrbing to our gift shop. You will receive latest gift updates on Home and Living! <br> Regards, ACC^.";
                         $sender  = "From: coldcode703@gmail.com"; //email from config xamppp
                             if(mail($userEmail, $subject, $message, $sender)){//php function to send email
                                 ?>
