@@ -6,10 +6,10 @@ require_once('config.php');
 <html>
 <head>
     <title>
-        Sign up - EGS
+        Sign up - E-Gift Shopper
     </title>
     <link rel="stylesheet" type="text/css" href="reg.css">
-     <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg ">
+     <link rel="shortcut icon" href=" logo-images/EGSS-LoGo.png">
      
      <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,7 +81,6 @@ require_once('config.php');
         border-radius: 4px;
             }
             </style>
-            <h1>E-Gift Shopper</h1>
             <hr class="mb-3">
             <label for="firstname"><b>First Name</b></label>
             <input type="text" id="firstname" name="firstname" placeholder="firstname" required>
@@ -90,7 +89,7 @@ require_once('config.php');
             <input type="text" id="lastname" name="lastname" placeholder="lastname" required><br>
 
             <label for="email"><b>Email Address</b></label>
-            <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+            <input type="email" id="email" name="email" placeholder="abc@example.com" required>
 
             <label for="phonenumber"><b>Phone Number</b></label>
             <input type="text" id="phonenumber" name="phonenumber" placeholder="phonenumber" required><br>
@@ -98,11 +97,12 @@ require_once('config.php');
             <label for="password"><b>Password</b></label>
             <input type="password" id="password" name="password" placeholder="enter password" required><br>
            
-            <input type="submit" class="btn" name="create" value="Sign Up"/><br>
+            <button type="submit" class="btn">Sign Up <i class="fas fa-sign-in-alt"></i></button>
+
         </div>
 
     
-    <a href="login.php">I already have an account ?</a>
+    <a href="login.php">Already a member ?</a>
     </form>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -152,9 +152,34 @@ require_once('config.php');
             
         });
        
-       
-        alert('Welcome to E-GIFT SHOPPER! Please proceed for Logging in!!');
-        
+        // snackbar alert
+            const showSnackbar = () => {
+              const snackbar = document.createElement('div');
+              snackbar.innerHTML = 'Welcome to E-GIFT SHOPPER! Please proceed for Logging in!';
+              snackbar.style.backgroundColor = 'rgba(144, 238, 144, 0.5)';
+              snackbar.style.position = 'fixed';
+              snackbar.style.top = '8%';
+              snackbar.style.left = '50%';
+              snackbar.style.transform = 'translate(-50%, 0%)';
+              snackbar.style.padding = '10px 20px';
+              snackbar.style.borderRadius = '5px';
+              snackbar.style.cursor = 'pointer';
+              snackbar.style.userSelect = 'none';
+            
+              document.body.appendChild(snackbar);
+            
+              setTimeout(() => {
+                snackbar.style.display = 'none';
+              }, 5000);
+            
+              snackbar.addEventListener('click', () => {
+                snackbar.style.display = 'none';
+              });
+            };
+            
+            showSnackbar();
+
+
         
     });
 </script>
