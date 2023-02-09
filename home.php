@@ -3,10 +3,7 @@
 if(empty($_SESSION['id'])):
     header('Location:index.php');
 endif;
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,37 +11,88 @@ endif;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg "> 
-    
-    <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href=" logo-images\e-letter-gift-shop-creative-lettering-sign-logo-design-template_657888-125.jpg "> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-        <!-- Google Font -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        
+    <link rel="shortcut icon" href="logo-images/EGSS-LoGo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="index.css"/>
-    <title>Home Page</title>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
-  </script>
-
-
+    <title>Home | E-Gift Shopper</title>
+           <style>
+                  #snackbar {
+                    visibility: hidden;
+                    min-width: 250px;
+                    background-color: rgba(0, 128, 0, 0.6);
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 2px;
+                    padding: 16px;
+                    position: fixed;
+                    z-index: 1;
+                    bottom: 30px;
+                    font-size: 17px;
+                    cursor: pointer;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                  }
+                
+                  #snackbar.show {
+                    visibility: visible;
+                    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                  }
+                
+                  @keyframes fadein {
+                    from {
+                      bottom: 0;
+                      opacity: 0;
+                    }
+                    to {
+                      bottom: 30px;
+                      opacity: 1;
+                    }
+                  }
+                
+                  @keyframes fadeout {
+                    from {
+                      bottom: 30px;
+                      opacity: 1;
+                    }
+                    to {
+                      bottom: 0;
+                      opacity: 0;
+                    }
+                  }
+                
+                  #snackbar i {
+                    margin-right: 10px;
+                  }
+                </style>
 </head>
 <body>
-    
-    <!-------logout------------------------->
+    <div id="snackbar">
+      <i class="fa fa-check-circle" aria-hidden="true">
+      </i> YAY! Success!
+    </div>
+        <script>
+          if (performance.navigation.type == 1) {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function () {
+              x.className = x.className.replace("show", "");
+            }, 5000);
+            document.getElementById("snackbar").addEventListener("click", function() {
+            this.className = this.className.replace("show", "");
+          });
+          }
+        </script>
+
+  <!-------logout------------------------->
     <a href="logout process.php"><div style="float:right"><button><i class="fa fa-power-off" aria-hidden="true"></i>LogOut</button></div></a>
 
     <h1>
@@ -77,7 +125,7 @@ endif;
    <section class="main">
 
     <!-------logo----------->
-    <div class="logo"><a href="home.php"><font>HOME </font>PAGE </a></div>
+    <div class="logo"><a href="home.php"><font>HOME </font>EGS </a></div>
   
   <!------navigation-bar------------->
   <ul>
@@ -866,8 +914,8 @@ endif;
                 if(isset($_POST['subscribe'])){//if subscribe btn is clicked
                     $userEmail = $_POST['email']; //getting user email
                     if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
-                        $subject = "Thanks for subscribing us - E-Gift Shopper - Home 🎁";
-                        $message    = "Thanks for subscrbing to our gift shop. You will always receive latest gift updates on your Home Page from us! <br> Regards, Administrator. </br>";
+                        $subject = "E-Gift Shopper | Home 🎁";
+                        $message    = "Thank YOU for subscrbing to our gift shop. You will receive latest gift updates on your Home Page! <br> Regards, ACC^.";
                         $sender  = "From: coldcode703@gmail.com"; //email from config xamppp
                             if(mail($userEmail, $subject, $message, $sender)){//php function to send email
                                 ?>
