@@ -20,6 +20,15 @@ endif;
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <!--Inter UI font-->
+        <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
+    
+        <!--vendors styles-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <!-- Bootstrap CSS / Color Scheme -->
+        <link rel="stylesheet" href="css/default.css" id="theme-color">
         <!-- Google Font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
         <!-- Font Awesome icons (free version)-->
@@ -62,7 +71,7 @@ endif;
   </ul>
     
  <!----------------------------------functional-search-box---------------------------------------->
- <input type="search" value="" class="search-bar" id="search" placeholder="Search Gift, ..." onchange="openPage()">
+ <input type="search" value="" class="search-bar" id="search" placeholder="Search Gift ..." onchange="openPage()">
         <div id="navigation"></div>
         <script>
             function openPage(){
@@ -212,6 +221,11 @@ endif;
         <!------buy btn------>
         <a href="#" class="buy-btn cart34">Add To Cart</a>
         </div>
+        
+        <!----------------------scroll to top------------------------>
+            <div class="scroll-top">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </div>
 
         
     <!--------------------------------------------subscribe-------------------------------------------->
@@ -289,7 +303,7 @@ endif;
         <div class="brand-text">
             <h3>Our Brand</h3>
             <h4><?php echo date ('Y'); ?> | E-Gift Shopper </h4>
-            <p>We Manage online gift purchases. This allows shoppers to search for and book gifts in their comfort zone areas. Shipping cost is also payable. We help you order the gift you want at a convenient time.
+            <p>We Manage online gift purchases. This allows shoppers to search for and order gifts reliably there and then. Shipping cost is also payable. We help you order the gift you want at the best convenient time.
             </p>
         </div>
         <!---img------>
@@ -304,6 +318,13 @@ endif;
     
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="giftcollection.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/scripts.js"></script>
     
 
 </body>
