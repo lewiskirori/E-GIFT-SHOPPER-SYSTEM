@@ -35,9 +35,6 @@ As retailers face increasing operational complexity, handling processes using ma
     - Add order
     - Update order
     
-### License
-
-    - MIT
 
 #### Payments Management ~~~ C.S 
 
@@ -49,6 +46,10 @@ As retailers face increasing operational complexity, handling processes using ma
     - Visual Checkout process
     - Funds Report
     - View payments
+    
+### License
+
+    - MIT
 
 #### Remarks
 
