@@ -34,6 +34,10 @@ As retailers face increasing operational complexity, handling processes using ma
     - Make order
     - Add order
     - Update order
+    
+### License
+
+    - MIT
 
 #### Payments Management ~~~ C.S 
 
