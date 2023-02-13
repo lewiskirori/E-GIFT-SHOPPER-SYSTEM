@@ -8,19 +8,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!--Inter UI font-->
+    <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
+
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="css/default.css" id="theme-color">
+    
      <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <!--Inter UI font-->
-        <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
-    
-        <!--vendors styles-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-        <!-- Bootstrap CSS / Color Scheme -->
-        <link rel="stylesheet" href="css/default.css" id="theme-color">
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
@@ -49,7 +50,7 @@
     <li><a href="login.php"><i class="fas fa-power-off"></i> LOGIN</a></li>
   </ul>
         <!----------------------------------functional-search-box---------------------------------------->
-        <input type="search" value="" class="search-bar" id="search" placeholder="Search Gift, Category, ..." onchange="openPage()">
+        <input type="search" value="" class="search-bar" id="search" placeholder="Search Gift, Category ..." onchange="openPage()">
         <div id="navigation"></div>
         <script>
             function openPage(){
@@ -771,9 +772,8 @@
         <a herf="#price" class="price">$9.00</a>
         <!------buy btn------>
         </div>
-
-
-<!----------------------scroll to top------------------------>
+        
+            <!----------------------scroll to top------------------------>
             <div class="scroll-top">
                 <i class="fa fa-angle-up" aria-hidden="true"></i>
             </div>
@@ -781,7 +781,7 @@
     <!--------------------------------------------subscribe-------------------------------------------->
     <section class="subscribe-container" id="giftsubscribe">
         <!-----heading-------->
-        <h3>Subscribe For New Gift Notification</h3>
+        <h3>Subscribe For New Gift Notification | EGS</h3>
         <!------input------->
         <form action="index.php" method="POST">
             <?php
@@ -790,18 +790,20 @@
                     $userEmail = $_POST['email']; //getting user email
                     if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
                         $subject = "Thanks for subscribing us | E-Gift Shopper 🎁";
-                        $message    = "Thank you for subscrbing to our gift shop. You will receive latest gift updates from EGS! <br> Regards, ACC^.";
-                        $sender  = "From: coldcode703@gmail.com"; //email from config xamppp
+                        $message    = "Dear CUSTOMER, You will receive  gift updates from our E-Gift Shopper home!
+                        
+                     Regards, ACC^.";
+                        $sender  = "From: coldcode703@gmail.com"; //email from company/administrator 
                             if(mail($userEmail, $subject, $message, $sender)){//php function to send email
                                 ?>
                                 <!--show a success message if email is  sent successfully-->
                                 <script>
                                     swal({
-                                  title: "Cheers!",
-                                  text: "Your Subscription was successful!",
+                                  title: "Subscribed!",
+                                  text: "You will receive latest gift updates from E-Gift Shopper home page!",
                                   icon: "success",
-                                  button: "Aww yiss!",
-                                  closeOnClickOutside: false,
+                                  button: "DONE",
+                                  closeOnClickOutside: true,
                                 });
                                 </script>
                                 <?php
@@ -810,11 +812,11 @@
                                     ?>
                                     <!--show an error message if somehow mail cannot be sent-->
                                     <script>
-                                    swal("Please Try again later.", "Failed somehow while sending your email!", "success", {
+                                    swal("Please try again later.", "Failed somehow while sending your email!", "success", {
                                         className: "boxstyle",
                                         buttons: {
                                             cancel: true,
-                                            closeOnClickOutside: false,
+                                            closeOnClickOutside: true,
                                   });
                                     </script>
                                     <?php
@@ -823,12 +825,12 @@
                         ?>
                         <!--show an error message if user email is  not correct-->
                         <script>
-                            swal("Please Try again.",
+                            swal("Please try again.",
                                  "<?php echo $userEmail ?> is not a correct email!",
                                  "warning", {
                                 dangerMode: true,
-                                buttons: true,
-                                closeOnClickOutside: false,
+                                buttons: false,
+                                closeOnClickOutside: true,
                             });
                         </script>
                         <?php
@@ -837,7 +839,7 @@
             ?>
         <div class="subscribe-input">
         <div class= "field">
-            <input type="email" name="email"class="subscribe-input" placeholder="example@gmail.com" required>
+            <input type="email" name="email"class="subscribe-input" placeholder="abc@example.com" required>
             </div>       
         <!------btn------->
         <input type="submit" name="subscribe"value="Subscribe" required="required" class="subscribe-btn">
@@ -853,7 +855,7 @@
         <div class="brand-text">
             <h3>Our Brand</h3>
             <h4><?php echo date ('Y'); ?> | E-Gift Shopper </h4>
-            <p>We Manage online gift purchases. This allows shoppers to search for and book gifts in their comfort zone areas. Shipping cost is also payable. We help you order the gift you want at a convenient time.
+            <p>We Manage online gift purchases. This allows shoppers to search for and order gifts reliably there and then. Shipping cost is also payable. We help you order the gift you want at the best convenient time.
             </p>
         </div>
         <!---img------>
@@ -866,16 +868,16 @@
     <!-----copyright------------------------->
     <a href="#copyright" class="copyright">&copy; 2021-<?php echo date ('Y'); ?> E-Gift Shopper | All Rights Reserved.</a>
     
+    
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="main.js"></script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="js/scripts.js"></script>
-    
             
 </body>
 </html>
