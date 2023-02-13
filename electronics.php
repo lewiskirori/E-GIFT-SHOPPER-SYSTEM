@@ -233,7 +233,7 @@ endif;
    <!--------------------------------------------subscribe-------------------------------------------->
    <section class="subscribe-container" id="giftsubscribe">
         <!-----heading-------->
-        <h3>Subscribe For New Gift Notification</h3>
+        <h3>Subscribe For New Gift Notification | Electronics</h3>
         <!------input------->
         <form action="electronics.php" method="POST">
             <?php
@@ -242,18 +242,20 @@ endif;
                     $userEmail = $_POST['email']; //getting user email
                    if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
                         $subject = "Electronics 💻";
-                        $message    = "Thanks YOU for subscrbing to our gift shop. You will receive latest gift updates on Electronics! <br> Regards, ACC^.";
-                        $sender  = "From: coldcode703@gmail.com"; //email from config xamppp
+                        $message    = "Dear SHOPPER, Thank YOU for subscrbing to our gift shop. You will receive latest gift updates on Electronics! 
+                        
+                     Regards, ACC^.";
+                        $sender  = "From: coldcode703@gmail.com"; //email from company/administrator 
                             if(mail($userEmail, $subject, $message, $sender)){//php function to send email
                                 ?>
                                         <!--show a success message if email is  sent successfully-->
                                 <script>
                                     swal({
-                                  title: "Cheers!",
-                                  text: "Your Subscription was successful!",
+                                  title: "Subscribed!",
+                                  text: "You will receive latest gift updates on electronics!",
                                   icon: "success",
-                                  button: "Aww yiss!",
-                                  closeOnClickOutside: false,
+                                  button: "DONE",
+                                  closeOnClickOutside: true,
                                 });
                                 </script>
                                 <?php
@@ -262,11 +264,11 @@ endif;
                                     ?>
                                     <!--show an error message if somehow mail cannot be sent-->
                                     <script>
-                                    swal("Please Try again later.", "Failed somehow while sending your email!", "success", {
+                                    swal("Please try again later.", "Failed somehow while sending your email!", "success", {
                                         className: "boxstyle",
                                         buttons: {
                                             cancel: true,
-                                            closeOnClickOutside: false,
+                                            closeOnClickOutside: true,
                                   });
                                     </script>
                                     <?php
@@ -275,12 +277,12 @@ endif;
                         ?>
                         <!--show an error message if user email is  not correct-->
                         <script>
-                            swal("Please Try again.",
+                            swal("Please try again.",
                                  "<?php echo $userEmail ?> is not a correct email!",
                                  "warning", {
                                 dangerMode: true,
-                                buttons: true,
-                                closeOnClickOutside: false,
+                                buttons: false,
+                                closeOnClickOutside: true,
                             });
                         </script>
                         <?php
@@ -289,7 +291,7 @@ endif;
             ?>
         <div class="subscribe-input">
         <div class= "field">
-            <input type="email" name="email"class="subscribe-input" placeholder="example@gmail.com" required>
+            <input type="email" name="email"class="subscribe-input" placeholder="abc@example.com" required>
             </div>       
         <!------btn------->
         <input type="submit" name="subscribe"value="Subscribe" class="subscribe-btn">
