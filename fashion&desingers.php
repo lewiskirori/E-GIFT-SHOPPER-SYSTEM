@@ -72,7 +72,7 @@ endif;
     
 
 <!----------------------------------functional-search-box---------------------------------------->
-<input type="search" value="" class="search-bar" id="search" placeholder="Search Gift, ..." onchange="openPage()">
+<input type="search" value="" class="search-bar" id="search" placeholder="Search Gift ..." onchange="openPage()">
         <div id="navigation"></div>
         <script>
             function openPage(){
@@ -240,16 +240,16 @@ endif;
         <a href="#" class="buy-btn cart12">Add To Cart</a>
         </div>
         
-        <!----------------------scroll to top------------------------>
+         <!----------------------scroll to top------------------------>
             <div class="scroll-top">
                 <i class="fa fa-angle-up" aria-hidden="true"></i>
             </div>
 
-        
+    
   <!--------------------------------------------subscribe-------------------------------------------->
   <section class="subscribe-container" id="giftsubscribe">
         <!-----heading-------->
-        <h3>Subscribe For New Gift Notification</h3>
+        <h3>Subscribe For New Gift Notification | Fashion</h3>
         <!------input------->
         <form action="fashion&desingers.php" method="POST">
             <?php
@@ -258,18 +258,20 @@ endif;
                     $userEmail = $_POST['email']; //getting user email
                     if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
                         $subject = "Fashion & Designers 🛍";
-                        $message    = "Thanks YOU for subscrbing to our gift shop. You will receive latest gift updates on Fashion and Designers! <br> Regards, ACC^.";
-                        $sender  = "From: coldcode703@gmail.com"; //email from config xamppp
+                        $message    = "Dear SHOPPER, Thank YOU for subscrbing to our gift shop. You will receive latest gift updates on Fashion and Designers!
+                        
+                     Regards, ACC^.";
+                        $sender  = "From: coldcode703@gmail.com"; //email from company/administrator 
                             if(mail($userEmail, $subject, $message, $sender)){//php function to send email
                                 ?>
                                          <!--show a success message if email is  sent successfully-->
                                 <script>
                                     swal({
-                                  title: "Cheers!",
-                                  text: "Your Subscription was successful!",
+                                  title: "Subscribed!",
+                                  text: "You will receive latest gift updates on fashion and designers!",
                                   icon: "success",
-                                  button: "Aww yiss!",
-                                  closeOnClickOutside: false,
+                                  button: "DONE",
+                                  closeOnClickOutside: true,
                                 });
                                 </script>
                                 <?php
@@ -278,11 +280,11 @@ endif;
                                     ?>
                                     <!--show an error message if somehow mail cannot be sent-->
                                     <script>
-                                    swal("Please Try again later.", "Failed somehow while sending your email!", "success", {
+                                    swal("Please try again later.", "Failed somehow while sending your email!", "success", {
                                         className: "boxstyle",
                                         buttons: {
                                             cancel: true,
-                                            closeOnClickOutside: false,
+                                            closeOnClickOutside: true,
                                   });
                                     </script>
                                     <?php
@@ -291,12 +293,12 @@ endif;
                         ?>
                         <!--show an error message if user email is  not correct-->
                         <script>
-                            swal("Please Try again.",
+                            swal("Please try again.",
                                  "<?php echo $userEmail ?> is not a correct email!",
                                  "warning", {
                                 dangerMode: true,
-                                buttons: true,
-                                closeOnClickOutside: false,
+                                buttons: false,
+                                closeOnClickOutside: true,
                             });
                         </script>
                         <?php
@@ -305,7 +307,7 @@ endif;
             ?>
         <div class="subscribe-input">
         <div class= "field">
-            <input type="email" name="email"class="subscribe-input" placeholder="example@gmail.com" required>
+            <input type="email" name="email"class="subscribe-input" placeholder="abc@example.com" required>
             </div>       
         <!------btn------->
         <input type="submit" name="subscribe"value="Subscribe" class="subscribe-btn">
@@ -321,7 +323,7 @@ endif;
         <div class="brand-text">
             <h3>Our Brand</h3>
             <h4><?php echo date ('Y'); ?> | E-Gift Shopper </h4>
-            <p>We Manage online gift purchases. This allows shoppers to search for and book gifts in their comfort zone areas. Shipping cost is also payable. We help you order the gift you want at a convenient time.
+            <p>We Manage online gift purchases. This allows shoppers to search for and order gifts reliably there and then. Shipping cost is also payable. We help you order the gift you want at the best convenient time.
             </p>
         </div>
         <!---img------>
@@ -336,7 +338,7 @@ endif;
     
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="fashion.js"></script>
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
