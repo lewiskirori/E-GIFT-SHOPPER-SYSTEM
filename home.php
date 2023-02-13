@@ -16,14 +16,14 @@ endif;
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!--Inter UI font-->
-        <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
-    
-        <!--vendors styles-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-        <!-- Bootstrap CSS / Color Scheme -->
-        <link rel="stylesheet" href="css/default.css" id="theme-color">
+    <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
+
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="css/default.css" id="theme-color">
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <!-- Font Awesome icons (free version)-->
@@ -112,21 +112,21 @@ endif;
     
     /* If the time is less than 1200 hours, show good morning */
     if ($time < "12") {
-        echo "Good Morning,";
+        echo "Good Morning";
     } else
     /* If the time is greater than or equal to 1200 hours, but less than 1600 hours, so good afternoon */
     if ($time >= "12" && $time < "16") {
-        echo "Good Afternoon,";
+        echo "Good Afternoon";
     } else
     /* Should the time be between or equal to 1600 and 2000 hours, show good evening */
     if ($time >= "16" && $time < "20") {
-        echo "Good Evening,";
+        echo "Good Evening";
     } else
     /* Finally, show good night if the time is greater than or equal to 2000 hours */
     if ($time >= "20") {
-        echo "Shouldn't you be in bed?.<br>Good Night,";
+        echo "Shouldn't you be in bed? Good Night";
     }
-    ?> <?php echo $_SESSION["username"]; ?><br>
+    ?> <div><a><font> <span style="text-transform:uppercase;"><?php echo $_SESSION["username"]; ?></span> </font></a></div>
     </span></a><span>
     <span></h1>
     
@@ -134,7 +134,7 @@ endif;
    <section class="main">
 
     <!-------logo----------->
-    <div class="logo"><a href="home.php"><font>HOME </font>EGS </a></div>
+    <div class="logo"><a href="home.php"><font>HO</font>ME </a></div>
   
   <!------navigation-bar------------->
   <ul>
@@ -151,7 +151,7 @@ endif;
     
 
         <!----------------------------------functional-search-box---------------------------------------->
-        <input type="search" value="" class="search-bar" id="search" placeholder="Search Gift, Category, ..." onchange="openPage()">
+        <input type="search" value="" class="search-bar" id="search" placeholder="Search Gift, Category ..." onchange="openPage()">
         <div id="navigation"></div>
         <script>
             function openPage(){
@@ -912,7 +912,7 @@ endif;
         <a href="#" class="buy-btn cart34">Add To Cart</a>
         </div>
         
-        <!----------------------scroll to top------------------------>
+        <!--------------------scroll to top------------------------>
             <div class="scroll-top">
                 <i class="fa fa-angle-up" aria-hidden="true"></i>
             </div>
@@ -920,7 +920,7 @@ endif;
      <!--------------------------------------------subscribe-------------------------------------------->
      <section class="subscribe-container" id="giftsubscribe">
         <!-----heading-------->
-        <h3>Subscribe For New Gift Notification</h3>
+        <h3>Subscribe For New Gift Notification | Home</h3>
         <!------input------->
         <form action="home.php" method="POST">
             <?php
@@ -929,18 +929,20 @@ endif;
                     $userEmail = $_POST['email']; //getting user email
                     if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
                         $subject = "E-Gift Shopper | Home 🎁";
-                        $message    = "Thank YOU for subscrbing to our gift shop. You will receive latest gift updates on your Home Page! <br> Regards, ACC^.";
-                        $sender  = "From: coldcode703@gmail.com"; //email from config xamppp
+                        $message    = "Dear SHOPPER, Thank YOU for subscrbing to our gift shop. You will receive latest gift updates on your shopping Home Page! 
+                        
+                     Regards, ACC^.";
+                        $sender  = "From: coldcode703@gmail.com"; //email from company/administrator 
                             if(mail($userEmail, $subject, $message, $sender)){//php function to send email
                                 ?>
                          <!--show a success message if email is  sent successfully-->
                                 <script>
                                     swal({
-                                  title: "Cheers!",
-                                  text: "Your Subscription was successful!",
+                                  title: "Subscribed!",
+                                  text: "You will receive latest gift updates on your shopper home page!",
                                   icon: "success",
-                                  button: "Aww yiss!",
-                                  closeOnClickOutside: false,
+                                  button: "DONE",
+                                  closeOnClickOutside: true,
                                 });
                                 </script>
                                 <?php
@@ -949,11 +951,11 @@ endif;
                                     ?>
                                     <!--show an error message if somehow mail cannot be sent-->
                                     <script>
-                                    swal("Please Try again later.", "Failed somehow while sending your email!", "success", {
+                                    swal("Please try again later.", "Failed somehow while sending your email!", "success", {
                                         className: "boxstyle",
                                         buttons: {
                                             cancel: true,
-                                            closeOnClickOutside: false,
+                                            closeOnClickOutside: true,
                                   });
                                     </script>
                                     <?php
@@ -962,12 +964,12 @@ endif;
                         ?>
                         <!--show an error message if user email is  not correct-->
                         <script>
-                            swal("Please Try again.",
+                            swal("Please try again.",
                                  "<?php echo $userEmail ?> is not a correct email!",
                                  "warning", {
                                 dangerMode: true,
-                                buttons: true,
-                                closeOnClickOutside: false,
+                                buttons: false,
+                                closeOnClickOutside: true,
                             });
                         </script>
                         <?php
@@ -976,7 +978,7 @@ endif;
             ?>
         <div class="subscribe-input">
         <div class= "field">
-            <input type="email" name="email"class="subscribe-input" placeholder="example@gmail.com" required>
+            <input type="email" name="email"class="subscribe-input" placeholder="abc@example.com" required>
             </div>       
         <!------btn------->
         <input type="submit" name="subscribe"value="Subscribe" required="required" class="subscribe-btn">
@@ -992,7 +994,7 @@ endif;
         <div class="brand-text">
             <h3>Our Brand</h3>
             <h4><?php echo date ('Y'); ?> | E-Gift Shopper </h4>
-            <p>We Manage online gift purchases. This allows shoppers to search for and book gifts in their comfort zone areas. Shipping cost is also payable. We help you order the gift you want at a convenient time.
+            <p>We Manage online gift purchases. This allows shoppers to search for and order gifts reliably there and then. Shipping cost is also payable. We help you order the gift you want at the best convenient time.
             </p>
         </div>
         <!---img------>
@@ -1014,6 +1016,7 @@ endif;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="js/scripts.js"></script>
+    
 
 </body>
 </html>
