@@ -40,7 +40,9 @@
         border-radius: 4px;
             }
             </style>
+<a href="login.php">            
 <img src="index-images\login-avatar.png" class="avatar">
+</a>
     <h1>LOGIN</h1>
 
 
