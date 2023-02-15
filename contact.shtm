@@ -54,7 +54,6 @@
                                   title: "Good Job!",
                                   text: "Keep engaging with us!",
                                   icon: "success",
-                                  button: "OK!",
                                   closeOnClickOutside: true,
                                   timer: 1000,
                                 });
