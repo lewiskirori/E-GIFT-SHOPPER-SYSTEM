@@ -70,7 +70,10 @@ require_once('config.php');
 
 
 <div class="loginbox" text-center>
+<a href="registration.php">
 <img src="index-images\signin-avatar.png" class="avatar"><br>
+</a>
+
 
 
     <form action="registration.php"  method="POST">
