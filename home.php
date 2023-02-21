@@ -983,8 +983,6 @@ endif;
         <!------btn------->
         <input type="submit" name="subscribe"value="Subscribe" required="required" class="subscribe-btn">
             </div>
-
-            
     </section>
 
 
