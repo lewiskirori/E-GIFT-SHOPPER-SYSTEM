@@ -277,8 +277,6 @@ endif;
         <!------btn------->
         <input type="submit" name="subscribe"value="Subscribe" class="subscribe-btn">
             </div>
-
-            
     </section>
     </section>
 
