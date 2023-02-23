@@ -53,7 +53,7 @@
     <input required="required" type="password" id="pass" name="password" placeholder="Enter password"/>
     <span class="fas fa-lock"></span><br><br>
     
-    <button type="submit" id="btn" name="login" default><i class="fas fa-sign-in"></i> Log in </button><br><br>
+    <button type="submit" id="btn" name="login" default> Log in </button><br><br>
     <a href="registration.php">Not a member yet ?</a>
 
 </form>
