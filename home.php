@@ -105,10 +105,12 @@ endif;
     <a href="logout process.php"><div style="float:right"><button><i class="fa fa-power-off" aria-hidden="true"></i>LogOut</button></div></a>
 
     <h1>
-    <?php  /* This sets the $time variable to the current hour in the 24 hour clock format */
-    $time = date("H");
+    <?php  
     /* Set the $timezone variable to become the current timezone */
     date_default_timezone_set('Africa/Nairobi');
+    
+    /* This sets the $time variable to the current hour in the 24 hour clock format */
+    $time = date("H");
     
     /* If the time is less than 1200 hours, show good morning */
     if ($time < "12") {
@@ -119,11 +121,11 @@ endif;
         echo "Good Afternoon";
     } else
     /* Should the time be between or equal to 1600 and 2000 hours, show good evening */
-    if ($time >= "16" && $time < "20") {
+    if ($time >= "16" && $time < "22") {
         echo "Good Evening";
     } else
     /* Finally, show good night if the time is greater than or equal to 2000 hours */
-    if ($time >= "20") {
+    if ($time >= "22") {
         echo "Shouldn't you be in bed? Good Night";
     }
     ?> <div><a><font> <span style="text-transform:uppercase;"><?php echo $_SESSION["username"]; ?></span> </font></a></div>
@@ -929,17 +931,17 @@ endif;
                     $userEmail = $_POST['email']; //getting user email
                     if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){//validating user input email
                         $subject = "E-Gift Shopper | Home 🎁";
-                        $message    = "Dear SHOPPER, Thank YOU for subscrbing to our gift shop. You will receive latest gift updates on your shopping Home Page! 
+                        $message    = "Dear SHOPPER, Thank YOU for subscrbing to our gift shop. You will receive latest gift updates on your shopping Home Page!
                         
-                     Regards, ACC^.";
+                        Regards, ACC^.";
                         $sender  = "From: coldcode703@gmail.com"; //email from company/administrator 
                             if(mail($userEmail, $subject, $message, $sender)){//php function to send email
                                 ?>
-                         <!--show a success message if email is  sent successfully-->
+                                <!--show a success message if email is  sent successfully-->
                                 <script>
                                     swal({
                                   title: "Subscribed!",
-                                  text: "You will receive latest gift updates on your shopper home page!",
+                                  text: "You will receive latest gift updates from E-Gift Shopper home page!",
                                   icon: "success",
                                   button: "DONE",
                                   closeOnClickOutside: true,
@@ -983,6 +985,8 @@ endif;
         <!------btn------->
         <input type="submit" name="subscribe"value="Subscribe" required="required" class="subscribe-btn">
             </div>
+
+            
     </section>
 
 
@@ -1003,7 +1007,7 @@ endif;
         </section>
 
     <!-----copyright------------------------->
-    <a href="#copyright" class="copyright">&copy 2021 - <?php echo date ('Y'); ?> E-Gift Shopper | All Rights Reserved.</a>
+    <a href="#copyright" class="copyright">&copy2021-<?php echo date ('Y'); ?> E-Gift Shopper | All Rights Reserved.</a>
     
     <script nomodule src="://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="main.js"></script>
