@@ -53,7 +53,50 @@
     <input required="required" type="password" id="pass" name="password" placeholder="Enter password"/>
     <span class="fas fa-lock"></span><br><br>
     
-    <button type="submit" id="btn" name="login" default> Log in </button><br><br>
+    <button type="submit" id="btn" name="login" default>
+         Log in
+         <span class="ripple"></span>
+         <style>
+          #btn {
+            position: relative;
+            overflow: hidden;
+          }
+          
+          #btn .ripple {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            background-image: radial-gradient(circle, rgba(255,255,255,.5) 10%, transparent 10.01%);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            transform: scale(10, 10);
+            opacity: 0;
+            transition: transform .5s, opacity 1s;
+          }
+          
+          #btn:active .ripple {
+            transform: scale(0, 0);
+            opacity: 0.5;
+            transition: 0s;
+          }
+        </style>
+        <script>
+            $('#btn').on('click', function(e) {
+              var ripple = $('<span class="ripple"></span>');
+              var x = e.pageX - $(this).offset().left;
+              var y = e.pageY - $(this).offset().top;
+              ripple.css({
+                left: x,
+                top: y
+              });
+              $(this).append(ripple);
+         
+            });
+        </script>
+    </button><br><br>
     <a href="registration.php">Not a member yet ?</a>
 
 </form>
