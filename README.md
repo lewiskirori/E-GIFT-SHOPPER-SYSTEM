@@ -52,5 +52,5 @@ As retailers face increasing operational complexity, handling processes using ma
 
 #### Remarks
 
-    --- Amazing venture ---
+    - Good project
 
