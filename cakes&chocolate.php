@@ -298,7 +298,7 @@ endif;
         </section>
 
     <!-----copyright------------------------->
-    <a href="#copyright" class="copyright">&copy 2021-<?php echo date ('Y'); ?> E-Gift Shopper | All Rights Reserved.</a>
+    <a href="#copyright" class="copyright">&copy; 2021-<?php echo date ('Y'); ?> E-Gift Shopper | All Rights Reserved.</a>
     
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="cakes.js"></script>
