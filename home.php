@@ -86,7 +86,7 @@ endif;
 <body>
     <div id="snackbar">
       <i class="fa fa-check-circle" aria-hidden="true">
-      </i> YAY! Success!
+      </i> Success!
     </div>
         <script>
           if (performance.navigation.type == 1) {
