@@ -10,27 +10,24 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!--Inter UI font-->
     <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
-
     <!--vendors styles-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <!-- Bootstrap CSS / Color Scheme -->
     <link rel="stylesheet" href="css/default.css" id="theme-color">
-    
      <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  <!-- Font Awesome icons (free version)-->
-  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+      <!-- Font Awesome icons (free version)-->
+      <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="index.css"/>
     <title>E-Gift Shopper | Wonderful Gift Shopping Today</title>
     <script src=
 "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
   </script>
-
 </head>
 <body>
     
@@ -192,19 +189,18 @@
                                 //giftsubcription
                                 if (x === "subscribe"){
                                                     window.location.href="#giftsubscribe";
-                                                }  
-
+                                                } 
             }
         </script>
 
-<!------main-section------->
-<section class="main">
-<!----side-search-box-->
+    <!------main-section------->
+    <section class="main">
+    <!----side-search-box-->
 
     <!-----main-img----------->
   
- <!----main-text-------->
- <div class="main-text"></div>
+     <!----main-text-------->
+     <div class="main-text"></div>
 
 
 
@@ -242,7 +238,6 @@
 <!------buy btn------>
 </div>
 
-
 <!-----box-2------->
 <div class="p-box" id="pb2">
     <!-----img------->
@@ -256,7 +251,6 @@
     <!------buy btn------>
     </div>
 
-    
 <!-----box-3------->
 <div class="p-box" id="pb3">
     <!-----img------->
@@ -270,7 +264,6 @@
     <!------buy btn------>
     </div>
 
-    
     <!-----box-4------->
 <div class="p-box" id="pb4">
     <!-----img------->
@@ -284,7 +277,6 @@
     <!------buy btn------>
     </div>
 
-    
     <!-----box-5------->
 <div class="p-box" id="pb5">
     <!-----img------->
@@ -298,7 +290,6 @@
     <!------buy btn------>
     </div>
 
-    
     <!-----box-6------->
 <div class="p-box" id="pb6">
     <!-----img------->
@@ -311,15 +302,9 @@
     <a herf="#price" class="price">$370.00</a>
     <!------buy btn------>
     </div>
-
-
-
-
-
 </div>
 
 </section>
-
     <!-----------------------------------------Fashion-&-Designers-------------------------------------->
 
     <!-----product--------->
@@ -344,7 +329,6 @@
     <!------buy btn------>
     </div>
     
-    
     <!-----box-2------->
     <div class="p-box" id="pb8">
         <!-----img------->
@@ -358,7 +342,6 @@
         <!------buy btn------>
         </div>
     
-        
     <!-----box-3------->
     <div class="p-box" id="pb9">
         <!-----img------->
@@ -372,7 +355,6 @@
         <!------buy btn------>
         </div>
     
-        
         <!-----box-4------->
     <div class="p-box" id="pb10">
         <!-----img------->
@@ -386,7 +368,6 @@
         <!------buy btn------>
         </div>
     
-        
         <!-----box-5------->
     <div class="p-box" id="pb11">
         <!-----img------->
@@ -400,7 +381,6 @@
         <!------buy btn------>
         </div>
     
-        
         <!-----box-6------->
     <div class="p-box" id="pb12">
         <!-----img------->
@@ -844,8 +824,6 @@
         <!------btn------->
         <input type="submit" name="subscribe"value="Subscribe" required="required" class="subscribe-btn">
             </div>
-
-            
     </section>
 
 <!---------------------------------------------BRAND------------------------------------------------------------>
@@ -877,7 +855,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="js/scripts.js"></script>
-            
+    <script src="js/scripts.js"></script>       
 </body>
 </html>
