@@ -10,7 +10,6 @@ require_once('config.php');
     </title>
     <link rel="stylesheet" type="text/css" href="reg.css">
      <link rel="shortcut icon" href=" logo-images/EGSS-LoGo.png">
-     
      <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,11 +24,9 @@ require_once('config.php');
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
-  </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+      </script>
 </head>
 
 <center>
@@ -41,7 +38,7 @@ require_once('config.php');
     <li><a href="contact.shtm"><i class="fas fa-phone"></i> Contact Us</a></li>
     <li><a href="login.php"><i class="fas fa-power-off"></i> LOGIN</a></li>
   </ul>
-
+    
 <div>
     <?php
     if(isset($_POST['create'])){
@@ -74,8 +71,6 @@ require_once('config.php');
 <img src="index-images\signin-avatar.png" class="avatar"><br>
 </a>
 
-
-
     <form action="registration.php"  method="POST">
         <div class="container" text-center>
             <style>
@@ -101,10 +96,8 @@ require_once('config.php');
             <input type="password" id="password" name="password" placeholder="enter password" required><br>
            
             <button type="submit" class="btn">Sign Up <i class="fas fa-sign-in-alt"></i></button>
-
         </div>
 
-    
     <a href="login.php">Already a member ?</a>
     </form>
 </div>
@@ -115,7 +108,6 @@ require_once('config.php');
         $('#register').click(function(e){
             
             var valid = this.form.checkValidity();
-
 
             if(valid){
 
@@ -146,13 +138,11 @@ require_once('config.php');
                         })
                     }
                 });
-
-                
+  
             }else{
                 
             }
 
-            
         });
        
         // snackbar alert
@@ -181,9 +171,6 @@ require_once('config.php');
             };
             
             showSnackbar();
-
-
-        
     });
 </script>
 </body>
