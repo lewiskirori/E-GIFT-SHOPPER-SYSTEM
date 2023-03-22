@@ -6,7 +6,6 @@
     </title>
     <link rel="stylesheet" type="text/css" href="login.css">
     <link rel="shortcut icon" href=" logo-images/EGSS-LoGo.png ">
-    
     <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +20,6 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        
 </head>
 
 <center>
@@ -39,17 +37,16 @@
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
         border-radius: 4px;
             }
-            </style>
+    </style>
 <a href="login.php">            
 <img src="index-images\login-avatar.png" class="avatar">
 </a>
     <h1>LOGIN</h1>
-
-
+    
     <form action="login process.php" method="POST">
     <input required="required" type="text" id="user" name="username" placeholder="Enter firstname"/>
     <span class="fas fa-user"></span><br><br>
-
+        
     <input required="required" type="password" id="pass" name="password" placeholder="Enter password"/>
     <span class="fas fa-lock"></span><br><br>
     
