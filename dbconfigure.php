@@ -1,11 +1,12 @@
 <?php
-  $dbserver="127.0.0.1";	//localhost
+  $dbserver="127.0.0.1";
   $dbuser="root";
   $dbpwd="";
   $dbname="egiftshopper";
 
 
-  function my_iud($query)//insert , update , delete
+  //Insert , update , delete
+  function my_iud($query)
   {
   global $dbserver,$dbuser,$dbpwd,$dbname;
   $cid=mysql_connect($dbserver,$dbuser,$dbpwd) or die("connection failed");
@@ -27,7 +28,7 @@
   return $rs;
   }
 
-  //to be used when sql query returns a single value
+  //Used when sql query returns a single value
   function my_one($query)
   {
   global $dbserver,$dbuser,$dbpwd,$dbname;
