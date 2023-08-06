@@ -10,7 +10,7 @@ As retailers face increasing operational complexity, handling processes using ma
 
     1. Customers Management
     2. Shoppers Management
-    3. Payments Management
+    3. Payment Management
 
 ## Requirements Specification
 
