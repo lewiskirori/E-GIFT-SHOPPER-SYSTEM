@@ -1,4 +1,4 @@
-# E-GIFT-SHOPPER-SYSTEM
+# E GIFT SHOPPER SYSTEM
 
 This system has been developed to realize client needs regarding online gift purchases. It can manage all information about gift-shopping, customers and payment modules.
 
